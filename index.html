@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Enrollment Form</title>
+    <script>
+        function disableAll() {
+            document.getElementById("name").disabled = true;
+            document.getElementById("class").disabled = true;
+            document.getElementById("dob").disabled = true;
+            document.getElementById("address").disabled = true;
+            document.getElementById("enroll").disabled = true;
+
+            document.getElementById("save").disabled = true;
+            document.getElementById("update").disabled = true;
+        }
+
+        function enableFields() {
+            document.getElementById("name").disabled = false;
+            document.getElementById("class").disabled = false;
+            document.getElementById("dob").disabled = false;
+            document.getElementById("address").disabled = false;
+            document.getElementById("enroll").disabled = false;
+        }
+    </script>
+</head>
+
+<body onload="disableAll()">
+
+<h2>Student Enrollment Form</h2>
+
+<form method="post" action="process.php">
+
+    Roll No:
+    <input type="number" name="roll" autofocus required><br><br>
+
+    Full Name:
+    <input type="text" name="name" id="name"><br><br>
+
+    Class:
+    <input type="text" name="class" id="class"><br><br>
+
+    Birth Date:
+    <input type="date" name="dob" id="dob"><br><br>
+
+    Address:
+    <input type="text" name="address" id="address"><br><br>
+
+    Enrollment Date:
+    <input type="date" name="enroll" id="enroll"><br><br>
+
+    <button type="submit" name="save" id="save">Save</button>
+    <button type="submit" name="update" id="update">Update</button>
+    <button type="reset">Reset</button>
+
+</form>
+
+</body>
+</html>
